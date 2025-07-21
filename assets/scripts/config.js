@@ -6,16 +6,7 @@ const GAME_CONFIG = {
     WIDTH: window.innerWidth, // Canvas width
     HEIGHT: window.innerHeight, // Canvas height
     CANVAS_ID: "canvas", // HTML canvas ID
-
     ENTITY_SCALE: 0.15, // Scaling factor for entities
-    V_UNIT_DIVISOR: 500, // Divisor for vertical unit calculation.
-                         // Smaller numbers will increase the 
-                         // vertical speed of entities.
-                         // Entities move at a speed of HEIGHT / V_UNIT_DIVISOR per frame.
-    V_UNIT_STEP: 50, // Step size for vertical unit divisor.
-                     // This is subtracted from V_UNIT_DIVISOR each time the difficulty increases.
-                     // A larger number will make the game increase in difficulty more quickly.
-    MIN_V_UNIT_DIVISOR: 200, // Minimum vertical unit divisor to prevent too high speeds
 
     // Assets
     BACKGROUND_IMAGE: "./assets/images/background.jpg", // Background image path
@@ -41,6 +32,16 @@ const GAME_CONFIG = {
     GAME_OVER_THRESHOLD: 3, // Number of green fish the player can miss before game ends
     MAX_DIFFICULTY_INCREASES: 6, // Maximum difficulty increases allowed
 
+    // Difficulty specific settings
+    V_UNIT_DIVISOR: 500, // Divisor for vertical unit calculation.
+                         // Smaller numbers will increase the 
+                         // vertical speed of entities.
+                         // Entities move at a speed of HEIGHT / V_UNIT_DIVISOR per frame.
+    V_UNIT_STEP: 50, // Step size for vertical unit divisor.
+                     // This is subtracted from V_UNIT_DIVISOR each time the difficulty increases.
+                     // A larger number will make the game increase in difficulty more quickly.
+    MIN_V_UNIT_DIVISOR: 200, // Minimum vertical unit divisor to prevent too high speeds
+
     // Text settings
     FONT_FAMILY: 'Arial', // Font family for text
     FONT_SIZE: 48, // Font size for text
@@ -50,6 +51,9 @@ const GAME_CONFIG = {
     SCORE_TEXT_Y: 10, // Y position for score text
     MISSED_TEXT_X: 10, // X position for missed text
     MISSED_TEXT_Y: 50, // Y position for missed text
+
+    // Visual effects
+    RIPPLE_SPEED: 2,
 
     // Getters
     get H_UNIT() {

@@ -12,6 +12,7 @@ class Renderer {
         this.canvasId = config.CANVAS_ID;
         this.entities = []; // Array of game entities to update/draw
         this.onReady = onReady;
+        this.rippleSpeed = config.RIPPLE_SPEED;
 
         // Create PIXI application and attach to canvas
         this.app = new PIXI.Application({
@@ -61,7 +62,7 @@ class Renderer {
         this.container.filters = [filter, blueFilter];
 
         // Animate ripples downwards
-        const rippleSpeed = 2;
+        const rippleSpeed = this.rippleSpeed;
         this.app.ticker.add((delta) => {
             ripplesSprite.y += rippleSpeed * delta;
             if (ripplesSprite.y >= ripplesSprite.height) {
