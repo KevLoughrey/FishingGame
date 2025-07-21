@@ -55,7 +55,7 @@ class Renderer {
 
         // Create a color matrix filter and tint greenish-blue
         const blueFilter = new PIXI.filters.ColorMatrixFilter();
-        blueFilter.tint(0x66ccff);
+        blueFilter.tint(0xbbeeff);
 
         // Apply the blue filter to the main container
         this.container.filters = [filter, blueFilter];
