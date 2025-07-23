@@ -47,6 +47,7 @@ class GameManager extends Observer {
             if (event.includes("Red")) {
                 // Game over logic goes here
                 alert("You lose! You caught a Red fish.");
+                location.reload();
             }
         }
         // Check for difficulty increase
@@ -67,6 +68,7 @@ class GameManager extends Observer {
             }
             if (this.greenFishMissed >= this.gameOverThreshold) {
                 alert("You lose! You missed too many Green fish.");
+                location.reload();
             }
         }
     }

@@ -145,7 +145,7 @@ class Fishery {
         this.fishSpeed = this.screenHeight / this.vUnitDivisor;
         if (increases < this.difficultyArrays.length) {
             // Add harder patterns to the pool
-            this.patterns = this.patterns.concat(this.difficultyArrays[increases]);
+            this.patterns = this.patterns.concat(this.difficultyArrays[increases - 1]);
         }
     }
 }
