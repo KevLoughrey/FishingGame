@@ -11,7 +11,10 @@ The project has been designed in accordance with OOP best practices. The bridge 
 * If you catch even one red fish, the game ends. 
 * If you miss three green fish, the game ends. 
 * Use the left and right arrow keys to move.
-* Note that full game over functionality has not yet been implemented. The game will currently just flash an alert when a loss is recorded. This will be updated in the next deployment.
+
+# Limitations
+* Due to the quick nature of development, the desktop experience was prioritised. The game is not currently playable on mobile devices.
+* Full game over functionality has not yet been implemented. The game will currently just flash an alert when a loss is recorded. This will be updated in the next deployment.
 
 ## Future Development
 * A simple backend API will be developed to track highscores.
